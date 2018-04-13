@@ -1,0 +1,15 @@
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = "27.0.3"
+    applicationId = "com.anw.tgcity.testmvp"
+    minSdkVersion = 15
+    targetSdkVersion = 26
+    versionCode = 1
+    versionName = "1.0"
+
+    androidConfig = [
+            isModule : true,
+            loginIsApp : false
+    ]
+
+}

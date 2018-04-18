@@ -1,7 +1,7 @@
 //通过是否是组件加载来设置启动的模式
-if (rootProject.ext.androidConfig.loginIsApp){
+if (rootProject.ext.androidConfig.loginIsApp) {
     apply plugin: 'com.android.application'
-}else {
+} else {
     apply plugin: 'com.android.library'
 }
 
@@ -12,7 +12,7 @@ android {
     buildToolsVersion gradleConfig["buildToolsVersion"]
     defaultConfig {
         //当以application启动时，需要设置对应的id
-        if(rootProject.ext.androidConfig.loginIsApp){
+        if (rootProject.ext.androidConfig.loginIsApp) {
             applicationId gradleConfig["applicationId"] + ".login"
         }
         minSdkVersion gradleConfig["minSdkVersion"]
@@ -24,7 +24,7 @@ android {
         //ARouter
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [moduleName: project.getName()]
             }
         }
     }
@@ -37,13 +37,13 @@ android {
     }
     //针对不同启动方式，需要使用不同的文件
     sourceSets {
-        main{
-            if(rootProject.ext.androidConfig.loginIsApp){
+        main {
+            if (rootProject.ext.androidConfig.loginIsApp) {
                 manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-            }else {
+            } else {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
                 //release下排除debug中所有的java文件
-                java{
+                java {
                     exclude 'debug/**'
                 }
             }
@@ -55,8 +55,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:26.1.0'
 
-
     //ARouter
+    compile 'com.android.support.constraint:constraint-layout:1.1.0'
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
 
     compile project(':library:baselibrary')

@@ -1,2 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.liyula.chenw.login" />
+    package="cn.liyula.chenw.login">
+
+    <application>
+        <activity android:name="com.anw.tgcity.login.LoginActivity"></activity>
+    </application>
+
+</manifest>

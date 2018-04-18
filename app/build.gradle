@@ -16,7 +16,7 @@ android {
         //ARouter
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
+                arguments = [moduleName: project.getName()]
             }
         }
     }
@@ -42,7 +42,7 @@ dependencies {
 
     compile project(':library:baselibrary')
 
-    if (!rootProject.ext.androidConfig.loginIsApp){
+    if (!rootProject.ext.androidConfig.loginIsApp) {
         compile project(':module:login')
     }
 }

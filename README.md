@@ -58,3 +58,17 @@ dependencies {
 
 }
 ```
+* module间的路由跳转实现
+```
+1 BaseApplication中进行配置属性
+    ARouter.openLog();//打开日志
+            ARouter.openDebug();//打开debug调试
+            ARouter.init(this);//初始化ARouter
+
+2 在ActivityIntentUtils中设置跳转标识
+
+3 路由跳转一般方法
+    ARouter.getInstance()
+            .build(ActivityIntentUtils.Login.FLAG_LOGIN)
+            .navigation();
+```

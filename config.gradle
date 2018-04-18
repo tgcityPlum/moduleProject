@@ -1,4 +1,6 @@
+
 ext {
+    //android
     compileSdkVersion = 26
     buildToolsVersion = "27.0.3"
     applicationId = "com.anw.tgcity.testmvp"
@@ -7,9 +9,32 @@ ext {
     versionCode = 1
     versionName = "1.0"
 
+    //sdkSupport
+    appcompatVersion = "26.1.0"
+    constraintVersion = "1.0.2"
+
+    //libraries
+    arouterCompilerVersion = "1.1.2.1"
+
+    //Testing
+    junitVersion = "4.12"
+
+    //androidConfig
     androidConfig = [
             isModule : true,
             loginIsApp : false
     ]
 
+    sdkSupportDependencies = [
+            appcompatV7 : "com.android.support:appcompat-v7:${appcompatVersion}",
+            constraint  : "com.android.support.constraint:constraint-layout:${constraintVersion}"
+    ]
+
+    dataDependencies = [
+            arouterCompiler : "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
+    ]
+
+    testDependencies = [
+            junit : "junit:junit:${junitVersion}"
+    ]
 }

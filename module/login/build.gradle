@@ -53,11 +53,14 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.1.0'
+
+    def supportDependencies = rootProject.ext.sdkSupportDependencies
+    def dataDependencies = rootProject.ext.dataDependencies
+
+    compile supportDependencies.appcompatV7
 
     //ARouter
-    compile 'com.android.support.constraint:constraint-layout:1.1.0'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
+    annotationProcessor dataDependencies.arouterCompiler
 
     compile project(':library:baselibrary')
 }

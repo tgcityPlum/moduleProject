@@ -32,7 +32,9 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    def dataDependencies = rootProject.ext.dataDependencies
+
     //ARouter
-    compile 'com.alibaba:arouter-api:1.2.1.1'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
+    compile 'com.alibaba:arouter-api:1.2.1.1'//(PS:此处无法提出去，报错Failed to resolve : annotationProcessor)
+    annotationProcessor dataDependencies.arouterCompiler
 }

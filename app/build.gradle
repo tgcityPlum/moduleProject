@@ -12,6 +12,13 @@ android {
         versionCode gradleConfig["versionCode"]
         versionName gradleConfig["versionName"]
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
     }
     buildTypes {
         release {
@@ -29,6 +36,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    //ARouter
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
+
+    compile project(':library:baselibrary')
 
     if (!rootProject.ext.androidConfig.loginIsApp){
         compile project(':module:login')

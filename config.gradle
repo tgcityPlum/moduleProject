@@ -15,26 +15,32 @@ ext {
 
     //libraries
     arouterCompilerVersion = "1.1.2.1"
+    jpushVersion = "3.0.3"
+    jcoreVersion = "1.1.1"
 
     //Testing
     junitVersion = "4.12"
 
     //androidConfig
     androidConfig = [
-            isModule : true,
-            loginIsApp : false
+            isModule        : true,
+            loginIsApp      : false,
+            JPUSH_APPKEY    : "160ed05983e11a5e2e6a772d",
+            JPUSH_CHANNEL   : "default"
     ]
 
     sdkSupportDependencies = [
-            appcompatV7 : "com.android.support:appcompat-v7:${appcompatVersion}",
-            constraint  : "com.android.support.constraint:constraint-layout:${constraintVersion}"
+            appcompatV7     : "com.android.support:appcompat-v7:${appcompatVersion}",
+            constraint      : "com.android.support.constraint:constraint-layout:${constraintVersion}"
     ]
 
     dataDependencies = [
-            arouterCompiler : "com.alibaba:arouter-compiler:${arouterCompilerVersion}"
+            arouterCompiler : "com.alibaba:arouter-compiler:${arouterCompilerVersion}",
+            jiguangJpush    : "cn.jiguang.sdk:jpush:${jpushVersion}",
+            jiguangJcore    : "cn.jiguang.sdk:jcore:${jcoreVersion}"
     ]
 
     testDependencies = [
-            junit : "junit:junit:${junitVersion}"
+            junit           : "junit:junit:${junitVersion}"
     ]
 }

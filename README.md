@@ -96,3 +96,4 @@ ext {
 2 关联文件
 在根目录下的`build.gradle`中设置`apply from: "config.gradle"`
 
+* 引入`share` module

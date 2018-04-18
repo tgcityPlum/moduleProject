@@ -13,7 +13,8 @@
 /library/activityrouter/build
 /library/annotation/build
 /library/baselibrary/build
+/library/share/src/androidTest
+/library/share/src/test
 /module/login/build
 /module/login/src/androidTest
 /module/login/src/test
-

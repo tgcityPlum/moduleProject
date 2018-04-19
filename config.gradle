@@ -17,6 +17,7 @@ ext {
     arouterCompilerVersion = "1.1.2.1"
     jpushVersion = "3.0.3"
     jcoreVersion = "1.1.1"
+    nineoldandroidsVersion = "2.4.0"
 
     //Testing
     junitVersion = "4.12"
@@ -31,13 +32,16 @@ ext {
 
     sdkSupportDependencies = [
             appcompatV7     : "com.android.support:appcompat-v7:${appcompatVersion}",
-            constraint      : "com.android.support.constraint:constraint-layout:${constraintVersion}"
+            constraint      : "com.android.support.constraint:constraint-layout:${constraintVersion}",
+            design          : "com.android.support:design:${appcompatVersion}",
+            annotations     : "com.android.support:support-annotations:${appcompatVersion}"
     ]
 
     dataDependencies = [
             arouterCompiler : "com.alibaba:arouter-compiler:${arouterCompilerVersion}",
             jiguangJpush    : "cn.jiguang.sdk:jpush:${jpushVersion}",
-            jiguangJcore    : "cn.jiguang.sdk:jcore:${jcoreVersion}"
+            jiguangJcore    : "cn.jiguang.sdk:jcore:${jcoreVersion}",
+            nineoldandroids : "com.nineoldandroids:library:${nineoldandroidsVersion}"
     ]
 
     testDependencies = [

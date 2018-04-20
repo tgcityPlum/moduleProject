@@ -32,6 +32,7 @@ ext {
 
     sdkSupportDependencies = [
             appcompatV7     : "com.android.support:appcompat-v7:${appcompatVersion}",
+            supportV4       : "com.android.support:support-v4:${appcompatVersion}",
             constraint      : "com.android.support.constraint:constraint-layout:${constraintVersion}",
             design          : "com.android.support:design:${appcompatVersion}",
             annotations     : "com.android.support:support-annotations:${appcompatVersion}"

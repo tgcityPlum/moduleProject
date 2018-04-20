@@ -100,27 +100,9 @@ ext {
 
 * 引入`umshare` module
 * 引入`jpush` module
+
 ## 04月19日
-### TSnackBar使用说明
+* 引入`TSnackBar` module
 
-```
-TSnackbar.make(mSnackRootView, message, TSnackbar.LENGTH_SHORT)
-                .setPromptThemBackground(prompt)
-                .setCallback(new TSnackbar.Callback() {
-                    @Override
-                    public void onDismissed(TSnackbar TSnackbar, @DismissEvent int event) {
-                        super.onDismissed(TSnackbar, event);
-                        switch (event) {
-                            case DISMISS_EVENT_TIMEOUT:
-                                try {
-                                    snackViewDismissWhenTimeOut(prompt);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                                break;
-                        }
-                    }
-                })
-                .show();
-
-```
+## 04月20日
+* 引入`banner` module
